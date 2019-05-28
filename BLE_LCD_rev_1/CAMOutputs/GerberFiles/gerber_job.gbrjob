@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2019-05-27T03:36:12Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.2.1"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "BLE_LCD"
+        },
+        "Owner": "Bao Tran <zycbbr@gmail.com>",
+        "Size": {
+            "X": 27.539,
+            "Y": 54.407
+        }
+    }
+}
