@@ -1,5 +1,4 @@
 # BLE_LCD
-___
 Using the RN4871 module, the microcontroller receives messages from a computer and displays text on the LCD.
 ___
 ### Primary goals
