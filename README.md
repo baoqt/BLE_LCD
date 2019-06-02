@@ -7,7 +7,6 @@ Establish connection with computer terminal or mobile device.
 Reliably receive messages.
 
 Stay within program memory limits, possibly offloading some code to the transmitter side.
-___
 ### Planned additions
 Removing the dedicated programming header if possible.
 
@@ -35,3 +34,12 @@ http://www.newhavendisplay.com/specs/NHD-C12832A1Z-NSW-BBW-3V3.pdf
 LCD display programming:
 
 http://www.newhavendisplay.com/specs/NHD-C12832A1Z-NSW-BBW-3V3.pdf
+### Images
+First revision schematic:
+
+![alt text](https://github.com/baoqt/BLE_LCD/blob/master/BLE_LCD_rev_1/rev_1_schematic.PNG)
+
+First revision board:
+
+![alt text](https://github.com/baoqt/BLE_LCD/blob/master/BLE_LCD_rev_1/rev_1_board.PNG)
+
