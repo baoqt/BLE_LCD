@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\LCD.X.production.hex">
+  <executable name="dist/default/production\BLE_LCD.X.production.hex">
     <memory name="program">
       <units>words</units>
       <length>4096</length>
-      <used>1521</used>
-      <free>2575</free>
+      <used>204</used>
+      <free>3892</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>512</length>
-      <used>28</used>
-      <free>484</free>
+      <used>13</used>
+      <free>499</free>
     </memory>
   </executable>
 </project>

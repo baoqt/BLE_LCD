@@ -1,0 +1,117 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18324 ]
+[d frameptr 6 ]
+"30 C:\Users\BAO\MPLABXProjects\BLE_LCD.X/LCD.h
+[v _command command `(v  1 e 1 0 ]
+"45
+[v _data data `(v  1 e 1 0 ]
+"60
+[v _LCD_init LCD_init `(v  1 e 1 0 ]
+"84
+[v _LCD_clear LCD_clear `(v  1 e 1 0 ]
+"41 C:\Users\BAO\MPLABXProjects\BLE_LCD.X\BLE_LCD.c
+[v _main main `(v  1 e 1 0 ]
+"81
+[v _displayClock displayClock `II(v  1 e 1 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"19 C:\Users\BAO\MPLABXProjects\BLE_LCD.X/LCD.h
+[v _packet packet `uc  1 e 1 0 ]
+"20
+[v _transmitFlag transmitFlag `a  1 e 1 0 ]
+"39 C:\Users\BAO\MPLABXProjects\BLE_LCD.X\BLE_LCD.c
+[v _packetIndex packetIndex `uc  1 e 1 0 ]
+"759 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18324.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+"892
+[v _TMR0H TMR0H `VEuc  1 e 1 @22 ]
+"1211
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @24 ]
+"1588
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1633
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"2857
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2902
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"11291
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2329 ]
+"11632
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2335 ]
+"19156
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"19384
+[v _LATA1 LATA1 `VEb  1 e 0 @2145 ]
+"19387
+[v _LATA2 LATA2 `VEb  1 e 0 @2146 ]
+"19393
+[v _LATA5 LATA5 `VEb  1 e 0 @2149 ]
+"19396
+[v _LATC0 LATC0 `VEb  1 e 0 @2160 ]
+"19399
+[v _LATC1 LATC1 `VEb  1 e 0 @2161 ]
+"19402
+[v _LATC2 LATC2 `VEb  1 e 0 @2162 ]
+"19408
+[v _LATC4 LATC4 `VEb  1 e 0 @2164 ]
+"19411
+[v _LATC5 LATC5 `VEb  1 e 0 @2165 ]
+"20593
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"21232
+[v _T0EN T0EN `VEb  1 e 0 @191 ]
+"21481
+[v _TMR0IE TMR0IE `VEb  1 e 0 @1157 ]
+"21484
+[v _TMR0IF TMR0IF `VEb  1 e 0 @133 ]
+"41 C:\Users\BAO\MPLABXProjects\BLE_LCD.X\BLE_LCD.c
+[v _main main `(v  1 e 1 0 ]
+{
+"79
+} 0
+"60 C:\Users\BAO\MPLABXProjects\BLE_LCD.X/LCD.h
+[v _LCD_init LCD_init `(v  1 e 1 0 ]
+{
+"73
+} 0
+"84
+[v _LCD_clear LCD_clear `(v  1 e 1 0 ]
+{
+"87
+[v LCD_clear@j j `c  1 a 1 6 ]
+"86
+[v LCD_clear@n n `uc  1 a 1 5 ]
+"102
+} 0
+"45
+[v _data data `(v  1 e 1 0 ]
+{
+[v data@data data `uc  1 a 1 wreg ]
+[v data@data data `uc  1 a 1 wreg ]
+"47
+[v data@data data `uc  1 a 1 3 ]
+"58
+} 0
+"30
+[v _command command `(v  1 e 1 0 ]
+{
+[v command@command command `uc  1 a 1 wreg ]
+[v command@command command `uc  1 a 1 wreg ]
+"32
+[v command@command command `uc  1 a 1 3 ]
+"43
+} 0
+"81 C:\Users\BAO\MPLABXProjects\BLE_LCD.X\BLE_LCD.c
+[v _displayClock displayClock `II(v  1 e 1 0 ]
+{
+"111
+} 0
