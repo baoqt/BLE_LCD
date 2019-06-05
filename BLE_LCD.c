@@ -33,7 +33,6 @@
 #include <xc.h>
 #include <stdint.h>
 #include <stdbool.h>
-
 #include "LCD.h"
 
 uint8_t packetIndex = 0;
@@ -69,10 +68,40 @@ void main(void) {
     
     LCD_init();
     LCD_clear();
-    
+
+    LCD_goto(3, 0);
+//    LCD_write_S("     LOADING...", 15);
+//    LCD_goto(2, 0);
+//    LCD_write('U');
+//    LCD_write('V');
+//    LCD_write('W');
+//    LCD_write('X');
+//    LCD_write('x');
+//    LCD_write('Y');
+//    LCD_write('Z');
+//    LCD_goto(1, 0);
+//    LCD_write_S("0123456789 :", 12);
+//    LCD_goto(0, 0);
+//    LCD_write_S("ABC ", 4);
+//    LCD_write('0');
+//    LCD_write('x');
+//    LCD_write(';');
+//    LCD_write(';');
+        
     while (1)
     {
-        // main loop
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING...", 15);
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING.. ", 15);
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING.  ", 15);
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING   ", 15);
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING.  ", 15);
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING.. ", 15);
     }
     
     return;

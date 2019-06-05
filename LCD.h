@@ -25,7 +25,8 @@ void data(unsigned char data);
 void LCD_init(void);
 void LCD_clear(void);
 void LCD_goto(uint8_t page, uint8_t offset);
-void LCD_write(unsigned char character);
+void LCD_write(char character);
+void LCD_write_S(char string[], int length);
 
 void command(unsigned char command)
 {
@@ -72,15 +73,6 @@ void LCD_init(void)
     return;
 }
 
-//void ADC_read(void)
-//{
-//    receiveFlag = 1;
-//    
-//    while (receiveFlag);
-//    
-//    return;
-//}
-
 void LCD_clear(void)
 {
     uint8_t n = 0;
@@ -110,7 +102,7 @@ void LCD_goto(uint8_t page, uint8_t offset)
     return;
 }
 
-void LCD_write(unsigned char character)
+void LCD_write(char character)
 {
     switch (character) {
         case 'A' :
@@ -501,8 +493,41 @@ void LCD_write(unsigned char character)
             data(0x00);
             data(0x00);
             data(0x00);
+            break;
+        }
+        case '.' :
+        {
+            data(0x00);
+            data(0x00);
+            data(0x01);
+            data(0x00);
+            data(0x00);
+            data(0x00);
+            break;
+        }
+        default :
+        {
+            data(0xFF);
+            data(0xFF);
+            data(0xFF);
+            data(0xFF);
+            data(0xFF);
+            data(0x00);
+            break;
         }
     }
+    
+    return;
+}
+
+void LCD_write_S(char string[], int length)
+{
+    for (int i = 0; i < length; i++) 
+    {   
+        LCD_write(string[i]);
+    }
+
+    return;
 }
 
 #endif

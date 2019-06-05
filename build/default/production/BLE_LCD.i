@@ -10435,7 +10435,6 @@ typedef uint32_t uint_fast32_t;
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdbool.h" 1 3
 # 35 "BLE_LCD.c" 2
 
-
 # 1 "./LCD.h" 1
 # 19 "./LCD.h"
 unsigned char packet;
@@ -10447,7 +10446,8 @@ void data(unsigned char data);
 void LCD_init(void);
 void LCD_clear(void);
 void LCD_goto(uint8_t page, uint8_t offset);
-void LCD_write(unsigned char character);
+void LCD_write(char character);
+void LCD_write_S(char string[], int length);
 
 void command(unsigned char command)
 {
@@ -10493,7 +10493,7 @@ void LCD_init(void)
 
     return;
 }
-# 84 "./LCD.h"
+
 void LCD_clear(void)
 {
     uint8_t n = 0;
@@ -10523,7 +10523,7 @@ void LCD_goto(uint8_t page, uint8_t offset)
     return;
 }
 
-void LCD_write(unsigned char character)
+void LCD_write(char character)
 {
     switch (character) {
         case 'A' :
@@ -10914,10 +10914,43 @@ void LCD_write(unsigned char character)
             data(0x00);
             data(0x00);
             data(0x00);
+            break;
+        }
+        case '.' :
+        {
+            data(0x00);
+            data(0x00);
+            data(0x01);
+            data(0x00);
+            data(0x00);
+            data(0x00);
+            break;
+        }
+        default :
+        {
+            data(0xFF);
+            data(0xFF);
+            data(0xFF);
+            data(0xFF);
+            data(0xFF);
+            data(0x00);
+            break;
         }
     }
+
+    return;
 }
-# 37 "BLE_LCD.c" 2
+
+void LCD_write_S(char string[], int length)
+{
+    for (int i = 0; i < length; i++)
+    {
+        LCD_write(string[i]);
+    }
+
+    return;
+}
+# 36 "BLE_LCD.c" 2
 
 
 uint8_t packetIndex = 0;
@@ -10954,9 +10987,22 @@ void main(void) {
     LCD_init();
     LCD_clear();
 
+    LCD_goto(3, 0);
+# 91 "BLE_LCD.c"
     while (1)
     {
-
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING...", 15);
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING.. ", 15);
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING.  ", 15);
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING   ", 15);
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING.  ", 15);
+        LCD_goto(2, 0);
+        LCD_write_S("     LOADING.. ", 15);
     }
 
     return;
